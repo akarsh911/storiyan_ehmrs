@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(131, 30, 255);
+}
+#hr{
+    font-size: 6em; max-width: 100vw;
+    animation: oc 3s ;
+    color:rgba(0, 0, 0, 0.995);
+}
+@keyframes oc {
+    0%,100%{font-size: 1em;color: aliceblue;}
+    25%{font-family: 'Times New Roman', Times, serif;
+        color: brown;
+    }
+
+    50%{font-size: 10em;color: black;}
+    
+}
