@@ -1,1 +1,1 @@
-setInterval(function(){location.reload();},5000);
+setInterval(function(){location.reload();},30000);

@@ -5,10 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <script src="../js/login_js.js"></script>
+    <link href="../css/login_style.css" rel="stylesheet"/>
 </head>
 <body>
-    <div class="header"></div>
-    <div class="content"></div>
-    <div class="footer"></div>
+   <!--#include virtual="../html/header.html" -->
+    <div class="content">
+        <div class="login_box">
+            <h1>Employee Login</h1>
+            <form method="post">
+                <label class="label" for="username">Emp. I.D. or Email Address</label><br>
+                <input class="input_box" type="text"  name="username" id="uid" autocomplete="username" required/>
+                <br><br>
+                <label class="label" for="password">Password</label><br>
+                <input class="input_box" type="password"  name="password" id="pwd" autocomplete="current-password" required/>
+                <br>
+                <span class="error" id="password_error" >error</span>
+                <br>
+                <input type="submit" value="Log in" class="login_bt"/>
+            </form>
+        </div>
+    </div>
+   <!--#include virtual="../html/footer.html" -->
 </body>
 </html>

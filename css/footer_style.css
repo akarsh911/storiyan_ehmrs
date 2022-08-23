@@ -23,7 +23,7 @@
     border-top-right-radius: 80%;
     border-top-left-radius: 80%;
     background-color:  rgba(192, 223, 154, 0.414);
-    border-top: 5px solid rgba(212, 17, 17, 0.341);  
+    border-top: 5px solid  rgba(212, 17, 17, 0.341);  
 }
 .bar3{
     height: 12vh;
