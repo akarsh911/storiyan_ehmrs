@@ -1,0 +1,28 @@
+.bottom_bar{
+    width: 100vw;
+    height: 18vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.spacer{
+    height: 4vh;
+}
+.bar1{
+    height: 10vh;
+    border-top-right-radius: 80%;
+    border-top-left-radius: 80%;
+    background-color: rgba(192, 223, 154, 0.789);
+}
+.bar2{
+    height: 18vh;
+    border-top-right-radius: 80%;
+    border-top-left-radius: 80%;
+    background-color:  rgba(192, 223, 154, 0.211);
+}
+.bar3{
+    height: 14vh;
+    border-top-right-radius: 80%;
+    border-top-left-radius: 80%;
+    background-color: rgba(192, 223, 154, 0.493);
+}
