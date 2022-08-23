@@ -3,7 +3,7 @@ body{
 }
 #hr{
     font-size: 6em; max-width: 100vw;
-    animation: oc 5s infinite ;
+    animation: oc 8s infinite ;
     color:rgba(0, 0, 0, 0.995);
 } 
 #hr:hover{cursor: pointer;}
@@ -13,11 +13,7 @@ body{
         width: 20px;
         height: auto;
     }
-    25%{
-        width: 50px;
-        height: auto;
-    }
-    75%{
+    50%{
         width: 70px;
         height: auto;
     }
