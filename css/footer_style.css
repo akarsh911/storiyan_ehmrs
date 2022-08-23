@@ -2,7 +2,7 @@
     max-width: 100vw;
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: 3px;
     left: 0;
 }
 .spacer{
@@ -12,7 +12,8 @@
     height: 10vh;
     border-top-right-radius: 80%;
     border-top-left-radius: 80%;
-    background-color: rgba(192, 223, 154, 0.789);
+    background-color: rgb(192, 223, 154);
+    border-top: 1px dashed black;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -22,12 +23,13 @@
     height: 14vh;
     border-top-right-radius: 80%;
     border-top-left-radius: 80%;
-    background-color:  rgba(192, 223, 154, 0.414);
+    background-color:  rgba(192, 223, 154, 0.627);
     border-top: 5px solid  rgba(212, 17, 17, 0.341);  
 }
 .bar3{
     height: 12vh;
     border-top-right-radius: 80%;
     border-top-left-radius: 80%;
-    background-color: rgba(192, 223, 154, 0.534);
+    border-top: 1px dashed black;
+    background-color: rgba(192, 223, 154, 0.744);
 }
