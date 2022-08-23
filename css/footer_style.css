@@ -1,28 +1,33 @@
 .bottom_bar{
-    width: 100vw;
-    height: 18vh;
+    max-width: 100vw;
+    width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
 }
 .spacer{
-    height: 4vh;
+    height: 2vh;
 }
 .bar1{
     height: 10vh;
     border-top-right-radius: 80%;
     border-top-left-radius: 80%;
     background-color: rgba(192, 223, 154, 0.789);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center; 
 }
 .bar2{
-    height: 18vh;
-    border-top-right-radius: 80%;
-    border-top-left-radius: 80%;
-    background-color:  rgba(192, 223, 154, 0.211);
-}
-.bar3{
     height: 14vh;
     border-top-right-radius: 80%;
     border-top-left-radius: 80%;
-    background-color: rgba(192, 223, 154, 0.493);
+    background-color:  rgba(192, 223, 154, 0.414);
+    border-top: 5px solid rgba(212, 17, 17, 0.341);  
+}
+.bar3{
+    height: 12vh;
+    border-top-right-radius: 80%;
+    border-top-left-radius: 80%;
+    background-color: rgba(192, 223, 154, 0.534);
 }
