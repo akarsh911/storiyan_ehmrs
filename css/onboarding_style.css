@@ -103,15 +103,27 @@
 }
 
 .err {
+    visibility: hidden;
     color: red;
     right: 5px;
     position: absolute;
 }
 
 .errem {
+    visibility: hidden;
     right: 14px;
     color: red;
     position: absolute;
+}
+
+.err.good {
+    visibility: visible;
+    color: green;
+}
+
+.errem.good {
+    visibility: visible;
+    color: green;
 }
 
 .error_msg {
