@@ -152,6 +152,10 @@
     font-size: 24px;
 }
 
+.all_good {
+    border: 2px solid green;
+}
+
 @keyframes shake {
 
     0%,
