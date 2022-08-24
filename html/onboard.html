@@ -22,32 +22,48 @@
             <div class="form_header"> Register to start a new Application Form</div>
             <div class="form_content">
                 <form>
-                    <label class="label">Name:</label><br>
+                    <label class="label">Name: <span class="red_star">*</span></label><br>
                     <div class="field_container">
-                        <input class="name" type="text" placeholder="First Name" name="f_name" id="f_name"
-                            autocomplete="given-name" required />
-                        <input class="name" type="text" placeholder="Last Name" name="l_name" id="l_name"
-                            autocomplete="family-name" required />
+                        <div class="input_icons"><i id="f_name_err" class="fa fa-exclamation-circle err"></i><input
+                                class="boxes error" type="text" placeholder="First Name" name="f_name" id="f_name"
+                                autocomplete="given-name" required /></div>
+
+                        <div class="input_icons">
+                            <i id="l_name_err" class="fa fa-exclamation-circle err"></i>
+                            <input class="boxes" type="text" placeholder="Last Name" name="l_name" id="l_name"
+                                autocomplete="family-name" required />
+                        </div>
+
                     </div>
-                    <label class="label">Email Address:</label><br>
+                    <span class="error_msg" id="name_err"></span><br>
+                    <label class="label">Email Address:<span class="red_star">*</span></label><br>
                     <div class="field_container">
-                        <input type="email" placeholder="Email Address" class="email" id="email" name="email"
-                            autocomplete="email" required />
+                        <div class="input_icons email"><i id="email_err" class="fa fa-exclamation-circle errem"></i>
+                            <input type="email" placeholder="Email Address" class="email" id="email" name="email"
+                                autocomplete="email" required />
+                        </div>
                     </div>
-                    <label class="label">Password:</label><br>
+                    <span class="error_msg" id="email_err"></span><br>
+                    <label class="label">Password:<span class="red_star">*</span></label><br>
                     <div class="field_container">
-                        <input class="name error" type="text" placeholder="Create Password" name="psw" id="psw"
-                            autocomplete="new-password" required />
-                        <input class="name" type="text" placeholder="Confirm Password" name="c_psw" id="c_psw"
-                            autocomplete="new-password" required />
+                        <div class="input_icons"><i id="psw_err" class="fa fa-exclamation-circle err"></i>
+                            <input class="boxes" type="text" placeholder="Create Password" name="psw" id="psw"
+                                autocomplete="new-password" required />
+                        </div>
+                        <div class="input_icons"><i id="c_psw_err" class="fa fa-exclamation-circle err"></i>
+                            <input class="boxes" type="text" placeholder="Confirm Password" name="c_psw" id="c_psw"
+                                autocomplete="new-password" required />
+                        </div>
                     </div>
+                    <span class="error_msg" id="psw_err"></span><br>
                     <div class="field_container submit">
-                    <button type="submit" class="submit_bt">Create Account <i class="fa fa-key" ></i></button>
+                        <button type="submit" class="submit_bt">Create Account <i class="fa fa-key"></i></button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>

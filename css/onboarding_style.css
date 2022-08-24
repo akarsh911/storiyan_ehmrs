@@ -16,7 +16,9 @@
 }
 
 .form_box {
+    margin-top: 5%;
     width: 60%;
+    max-width: 750px;
     background-color: white;
     border-radius: 15px;
     border-top: 5px solid rgb(212, 17, 17, 0.9);
@@ -43,72 +45,126 @@
 }
 
 .field_container {
+    width: 100%;
     margin-top: 1%;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 
 }
-.field_container.submit{
+
+.field_container.submit {
     margin-top: 5%;
     justify-content: right;
 }
 
-.name {
-    padding: 1%;
+.boxes {
+    padding: 8px;
     font-size: 16px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 45%;
+    width: 100%;
     display: inline-block;
 }
 
-.name:focus {
-    border: thin solid yellow;
-    
-}
-.name.error {
-    border: thin solid red;
+
+.boxes.error {
+    border: 2px solid red;
     animation: shake 0.2s 2 backwards linear;
 }
-.email{
-    padding:1%;
+
+.email {
+    padding: 8px;
     font-size: 16px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 95%;
+    width: 100%;
 }
-.password{
-        padding: 1%;
-        font-size: 16px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        width: 45%;
-        display: inline-block;
+
+.email.error {
+    border: 2px solid red;
+    animation: shake 0.2s 2 backwards linear;
 }
-.submit_bt{
-    padding: 2%;
+
+
+
+.submit_bt {
+    padding: 1%;
     float: right;
     margin-right: 2%;
-    background-color: rgb(61, 194, 16);
+    background-color: rgb(45, 157, 8);
     border: 1px solid white;
     color: white;
 
 }
-.submit_bt:hover{
-    background-color:rgb(41, 134, 10) ;
+
+.submit_bt:hover {
+    background-color: rgb(41, 134, 10);
     cursor: pointer;
 }
+
+.err {
+    color: red;
+    right: 5px;
+    position: absolute;
+}
+
+.errem {
+    right: 14px;
+    color: red;
+    position: absolute;
+}
+
+.error_msg {
+    height: 1%;
+    width: 100%;
+    padding: 5px;
+    color: red;
+    font-size: 16px;
+}
+
+.input_icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    width: 48%;
+    position: relative
+}
+
+.input_icons.email {
+    width: 98%;
+}
+
+.red_star {
+    color: red;
+    font-size: 24px;
+}
+
 @keyframes shake {
-    0%,100%{
+
+    0%,
+    100% {
         transform: translateX(0);
     }
-    25%{
+
+    25% {
         transform: translateX(-1%);
     }
-    50%{
+
+    50% {
         transform: translateX(0);
     }
-    75%{
+
+    75% {
         transform: translateX(1%);
     }
-    
+
+}
+
+@media screen and (max-width: 750px) {
+    .form_box {
+        width: 80%;
+        max-width: 600px;
+    }
+
 }
