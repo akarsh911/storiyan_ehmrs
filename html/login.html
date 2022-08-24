@@ -12,23 +12,11 @@
 <body>
    <!--#include virtual="../html/header.html" -->
     <div class="content">
-        <div class="login_box">
-            <h1>Employee Login</h1>
-            <form method="post">
-                <label class="label" for="username">Emp. I.D. or Email Address</label><br>
-                <input class="input_box" type="text"  name="username" id="uid" autocomplete="username" required/>
-                <br><br>
-                <label class="label" for="password">Password</label><br>
-                <div class="wrapper">
-                <input class="input_box pwd" type="password"  name="password" id="pwd" autocomplete="current-password" required/>
-                <button id="chng" type="button" class="show" onclick="change_pwd(); return false;"><i class="fa fa-eye"></i></button>
-                </div>
-                <br>
-                <span class="error" id="password_error" >error</span>
-                <br>
-                <button type="submit" value="Log in" class="login_bt">Log In</button>
-            </form>
-        </div>
+        <div class="login_box" id="login_box">
+            <div id="box1">
+              <!--#include virtual="../html/login_set.html" -->
+             </div>
+          </div>
     </div>
    <!--#include virtual="../html/footer.html" -->
    <i class="fa-solid fa-eye-slash" hidden></i>

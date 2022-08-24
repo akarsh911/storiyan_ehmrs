@@ -1,0 +1,114 @@
+.content {
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    top: 0;
+    z-index: -1;
+    background-image: linear-gradient(45deg, rgba(205, 202, 24, 0.836), rgba(251, 255, 249, 0.7)), url(../media/bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form_box {
+    width: 60%;
+    background-color: white;
+    border-radius: 15px;
+    border-top: 5px solid rgb(212, 17, 17, 0.9);
+    padding: 1em;
+}
+
+.form_title {
+    font-family: cursive;
+    text-align: center;
+    width: 100%;
+    font-size: 32px;
+}
+
+.form_subtitle {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form_header {
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.field_container {
+    margin-top: 1%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+.field_container.submit{
+    margin-top: 5%;
+    justify-content: right;
+}
+
+.name {
+    padding: 1%;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 45%;
+    display: inline-block;
+}
+
+.name:focus {
+    border: thin solid yellow;
+    
+}
+.name.error {
+    border: thin solid red;
+    animation: shake 0.2s 2 backwards linear;
+}
+.email{
+    padding:1%;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 95%;
+}
+.password{
+        padding: 1%;
+        font-size: 16px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        width: 45%;
+        display: inline-block;
+}
+.submit_bt{
+    padding: 2%;
+    float: right;
+    margin-right: 2%;
+    background-color: rgb(61, 194, 16);
+    border: 1px solid white;
+    color: white;
+
+}
+.submit_bt:hover{
+    background-color:rgb(41, 134, 10) ;
+    cursor: pointer;
+}
+@keyframes shake {
+    0%,100%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-1%);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(1%);
+    }
+    
+}

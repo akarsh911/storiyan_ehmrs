@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Onboarding-Step 1</title>
+    <link rel="stylesheet" href="../css/onboarding_style.css" />
+    <script src="https://kit.fontawesome.com/56f1776af2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--#include virtual="../html/header.html" -->
+    <div class="content">
+        <div class="form_box">
+            <div class="form_title">Exploring opportunities at Storiyaan</div>
+            <div class="form_subtitle">We value your talent, hence we try our best to make the best possible use of it.
+            </div>
+            <hr>
+            <br>
+            <div class="form_header"> Register to start a new Application Form</div>
+            <div class="form_content">
+                <form>
+                    <label class="label">Name:</label><br>
+                    <div class="field_container">
+                        <input class="name" type="text" placeholder="First Name" name="f_name" id="f_name"
+                            autocomplete="given-name" required />
+                        <input class="name" type="text" placeholder="Last Name" name="l_name" id="l_name"
+                            autocomplete="family-name" required />
+                    </div>
+                    <label class="label">Email Address:</label><br>
+                    <div class="field_container">
+                        <input type="email" placeholder="Email Address" class="email" id="email" name="email"
+                            autocomplete="email" required />
+                    </div>
+                    <label class="label">Password:</label><br>
+                    <div class="field_container">
+                        <input class="name error" type="text" placeholder="Create Password" name="psw" id="psw"
+                            autocomplete="new-password" required />
+                        <input class="name" type="text" placeholder="Confirm Password" name="c_psw" id="c_psw"
+                            autocomplete="new-password" required />
+                    </div>
+                    <div class="field_container submit">
+                    <button type="submit" class="submit_bt">Create Account <i class="fa fa-key" ></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
