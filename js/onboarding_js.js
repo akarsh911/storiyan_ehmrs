@@ -124,6 +124,7 @@ function psw_key() {
 }
 function psw_match() {
     if (psw.value == c_psw.value && c_psw.value != "") {
+        c_psw_flag=true;
         if (psw_flag && c_psw_flag) { msg = ""; }
         else {
             msg = document.getElementById("psw_err_msg").innerText;
@@ -134,6 +135,7 @@ function psw_match() {
         c_psw.setCustomValidity("");
     }
     else {
+        c_psw_flag=false;
         msg = "Confirm Password should Match"
         if (!psw_flag) {
             msg = "Please enter a password with 7-16 characters , one lower & uppercase & one sp. character";
