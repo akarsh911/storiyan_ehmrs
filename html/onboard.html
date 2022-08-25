@@ -12,7 +12,6 @@
 
 <body>
     <!--- class for tick "fa-solid fa-circle-check" -->
-    <!--Abhi pura complete nhi hua h sabme script banana baki h-->
     <!--#include virtual="../html/header.html" -->
     <div class="content">
         <div class="form_box">
@@ -23,7 +22,7 @@
             <br>
             <div class="form_header"> Register to start a new Application Form</div>
             <div class="form_content">
-                <form>
+                <form method="post" action="../php/register_data_st1.php">
                     <label class="label">Name: <span class="red_star">*</span></label><br>
                     <div class="field_container">
                         <div class="input_icons"><i id="f_name_err" class="fa fa-exclamation-circle err"></i><input
@@ -53,7 +52,7 @@
                                 name="psw" id="psw" autocomplete="new-password" required />
                         </div>
                         <div class="input_icons"><i id="c_psw_err" class="fa fa-exclamation-circle err"></i>
-                            <input onblur="psw_match();" class="boxes" type="password" placeholder="Confirm Password"
+                            <input onblur="psw_match();" onkeyup="check_all();" class="boxes" type="password" placeholder="Confirm Password"
                                 name="c_psw" id="c_psw" autocomplete="new-password" required />
                         </div>
                     </div>

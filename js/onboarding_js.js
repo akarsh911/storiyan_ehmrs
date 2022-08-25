@@ -7,8 +7,33 @@ var f_name_flag = false;
 var l_name_flag = false;
 var psw_flag = false;
 var c_psw_flag = false;
+var data = sessionStorage.getItem("err_data");
+if (data != "" && data != null) {
 
-
+    data = JSON.parse(data);
+    f_name.value = data.f_name.val;
+    l_name.value = data.l_name.val;
+    email.value = data.email.val;
+    psw.value = data.psw.val;
+    c_psw.value = data.c_psw.val;
+    check_all();
+    if(data.used_email==true)
+    {
+        msg = "Email already in use with different ID";
+        things_bad("email", email);
+        var err_msg = document.getElementById("email_err_msg");
+        err_msg.innerHTML = msg;
+        email.setCustomValidity(msg);
+    }
+    //TODO: FIll data and handel error
+}
+function check_all() {
+    f_name_key();
+    l_name_key();
+    email_key();
+    psw_key();
+    psw_match();
+}
 function f_name_key() {
     var temp = name_verify(f_name.value);
     f_name_flag = temp;
@@ -124,7 +149,7 @@ function psw_key() {
 }
 function psw_match() {
     if (psw.value == c_psw.value && c_psw.value != "") {
-        c_psw_flag=true;
+        c_psw_flag = true;
         if (psw_flag && c_psw_flag) { msg = ""; }
         else {
             msg = document.getElementById("psw_err_msg").innerText;
@@ -135,7 +160,7 @@ function psw_match() {
         c_psw.setCustomValidity("");
     }
     else {
-        c_psw_flag=false;
+        c_psw_flag = false;
         msg = "Confirm Password should Match"
         if (!psw_flag) {
             msg = "Please enter a password with 7-16 characters , one lower & uppercase & one sp. character";
@@ -149,7 +174,7 @@ function psw_match() {
 }
 
 function CheckPassword(inputtxt) {
-    var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;;
+    var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
     if (inputtxt.value.match(passw)) {
         return true;
     }

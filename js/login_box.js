@@ -1,3 +1,11 @@
+var data = sessionStorage.getItem("err");
+if (data != "" && data != null) {
+
+    data = JSON.parse(data);
+    if (data.val != null && data.val != "") {
+        document.getElementById("password_error").innerText = data.val;
+    }
+}
 function change_pwd() {
     var chng = document.getElementById("chng");
     var but = document.getElementById("pwd");
@@ -15,12 +23,4 @@ function fg_pwd() {
     fetch('../html/forgot_psw.html')
         .then(response => response.text())
         .then(text => document.getElementById('box1').innerHTML = text);
-}
-function login()
-{
-    var chng = document.getElementById("box1");
-    fetch('../html/login_set.html')
-        .then(response => response.text())
-        .then(text => document.getElementById('box1').innerHTML = text);
-
 }

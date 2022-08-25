@@ -74,12 +74,9 @@
 }
 
 .error {
-    visibility: hidden;
     color: red;
     margin-top: 15px;
     font-size: 18px;
-    float: left;
-
 }
 
 .show {

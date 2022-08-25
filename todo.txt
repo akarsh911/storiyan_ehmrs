@@ -1,6 +1,7 @@
 Create a Login Page
 Create a Registeration Page
-Create a php + js to revirify and save data in databse
+Create a php + js to  save data in databse
 create a php + js cookie /local storage system to login user
 Create a user dashboard page
 create second step of form
+install todo tree extention

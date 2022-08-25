@@ -1,5 +1,5 @@
 <h1>Employee Login</h1>
-<form method="post">
+<form method="post" action="../php/login_user.php">
     <label class="label" for="username">Emp. I.D. or Email Address</label><br>
     <input class="input_box" type="text" name="username" id="uid" autocomplete="username" required />
     <br><br>
@@ -11,10 +11,11 @@
                 class="fa fa-eye"></i></button>
     </div>
     <br>
-    <span class="error" id="password_error">error</span>
+    <span class="error" id="password_error"></span>
     <br>
     <div class="wrapper2">
         <span class="fg_pw" onclick="fg_pwd();">Forgot Password?</span>
         <button type="submit" value="Log in" class="login_bt">Log In</button>
     </div>
+    <script src="../js/login_box.js"></script>
 </form>
