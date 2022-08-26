@@ -1,3 +1,14 @@
+<script>
+function setcookie(name, value, days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000); // ) removed
+        var expires = "; expires=" + date.toGMTString(); // + added
+    } else
+        var expires = "";
+    document.cookie = name + "=" + value + expires + ";path=/"; // + and " added
+}
+</script>
 <?php
 require_once('./create_edit_user.php');
 require_once('./login_logout_user.php');
@@ -15,7 +26,7 @@ if ($resp == 0) {
     if (logout($username) == 1) {
         logout($username);
         logged_in($resp, $username, $id);
-        echo '<script>localStorage.setItem("key",' . $id . ')</script>';
+        echo "<script>setcookie('key','" . $id . "', 15)</script>";
         echo '<script>window.onload = (event) => {location.replace("../html/dashboard.html")};</script>';
     }
 }
@@ -44,4 +55,4 @@ function gen_uuid()
         mt_rand(0, 0xffff),
         mt_rand(0, 0xffff)
     );
-}
+} ?>

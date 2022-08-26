@@ -10,7 +10,7 @@
     align-content: center;
     top: 0;
     z-index: -1;
-    background-image: linear-gradient(45deg, rgba(205, 202, 24, 0.836), rgba(251, 255, 249, 0.7)), url(../media/bg.svg);
+    background-image: url(../media/bg.svg);
     background-size: cover;
     background-repeat: no-repeat;
 }

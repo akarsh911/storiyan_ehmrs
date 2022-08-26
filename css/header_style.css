@@ -1,4 +1,4 @@
-.top_bar{
+.top_bar {
     width: 100vw;
     height: 8vh;
     position: absolute;
@@ -7,15 +7,16 @@
     border-bottom-left-radius: 100%;
     border-bottom-right-radius: 100%;
     box-shadow: 0px 3px rgba(212, 17, 17, 0.341);
-    background-color: rgb(192, 223, 154);
-    padding-top:1%;
+    background-color: rgba(255, 249, 204, 0.893);
+    padding-top: 1%;
     padding-bottom: 1%;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: center;    
+    justify-content: center;
     z-index: 5;
 }
-.logo_img{
-   height:100%;
+
+.logo_img {
+    height: 100%;
 }

@@ -9,7 +9,7 @@ body {
 }
 
 .top_bar {
-    padding: 1%;
+    padding: 2vh;
     height: 8vh;
     width: 100%;
     background-color: rgb(234, 255, 231);
@@ -23,6 +23,12 @@ body {
     align-content: center;
     justify-content: center;
     align-items: center;
+}
+
+.icon {
+    font-size: 24px;
+    color: rgb(40, 97, 3);
+    padding-right: 14px;
 }
 
 .logo_img {
@@ -105,8 +111,9 @@ body {
 }
 
 .popup_box_profile {
+    z-index: 10;
     background-color: rgb(239, 255, 237);
-    min-width: 380px;
+    min-width: 450px;
     min-height: 200px;
     right: 3%;
     margin-left: auto;

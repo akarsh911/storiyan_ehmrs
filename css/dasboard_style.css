@@ -4,8 +4,33 @@ body {
 }
 
 .no_head {
-    height: calc(100vh-12vh);
-    margin-top: 5px;
+    position: relative;
+    min-height: calc(100vh - 12vh);
+    margin-top: calc(12vh);
+    background-color: rgba(0, 0, 0, 0.115);
     z-index: -1;
-    background-color: beige;
+}
+
+.navigation_container {
+    position: relative;
+    min-height: calc(100vh - 12vh);
+    min-width: 15%;
+    width: fit-content;
+    max-width: 20%;
+    box-shadow: 5px 2px 5px 5px rgb(0 0 0 / 16%), 7px 2px 10px 7px rgb(0 0 0 / 12%);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.navigation_bar {
+    background-color: rgb(180, 255, 170);
+    position: relative;
+    height: calc(100vh - 12vh);
+    width: 100%;
+}
+
+.navigation_tab {
+    position: relative;
+
 }
