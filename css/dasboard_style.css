@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.no_head {
+    height: calc(100vh-12vh);
+    margin-top: 5px;
+    z-index: -1;
+    background-color: beige;
+}
