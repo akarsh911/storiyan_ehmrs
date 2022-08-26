@@ -13,7 +13,7 @@
 <body>
     <!--- class for tick "fa-solid fa-circle-check" -->
     <!--#include virtual="../html/header.html" -->
-    <div class="content">
+    <div class="content" id="content">
         <div class="form_box">
             <div class="form_title">Exploring opportunities at Storiyaan</div>
             <div class="form_subtitle">We value your talent, hence we try our best to make the best possible use of it.
@@ -52,8 +52,9 @@
                                 name="psw" id="psw" autocomplete="new-password" required />
                         </div>
                         <div class="input_icons"><i id="c_psw_err" class="fa fa-exclamation-circle err"></i>
-                            <input onblur="psw_match();" onkeyup="check_all();" class="boxes" type="password" placeholder="Confirm Password"
-                                name="c_psw" id="c_psw" autocomplete="new-password" required />
+                            <input onblur="psw_match();" onkeyup="check_all();" class="boxes" type="password"
+                                placeholder="Confirm Password" name="c_psw" id="c_psw" autocomplete="new-password"
+                                required />
                         </div>
                     </div>
                     <span class="error_msg" id="psw_err_msg"></span><br>
@@ -65,6 +66,7 @@
         </div>
     </div>
     <script src="../js/onboarding_js.js"></script>
+    <script src="../js/random_bg.js"></script>
 </body>
 
 </html>
