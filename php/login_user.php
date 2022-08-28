@@ -10,8 +10,8 @@ function setcookie(name, value, days) {
 }
 </script>
 <?php
-require_once('./create_edit_user.php');
-require_once('./login_logout_user.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/php/create_edit_user.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/php/login_logout_user.php');
 $username = trim($_POST["username"], '\'"');
 $password = trim($_POST["password"], '\'"');
 $username = get_email($username);
@@ -36,7 +36,7 @@ if ($resp == 0) {
             logout($username);
             logged_in($resp, $username, $id);
             echo "<script>setcookie('key','" . $id . "', 15)</script>";
-            echo '<script>window.onload = (event) => {location.replace("../html/dashboard.html")};</script>';
+            echo '<script>window.onload = (event) => {location.replace("../dashboard")};</script>';
         }
     }
 }

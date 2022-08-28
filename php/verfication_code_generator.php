@@ -1,5 +1,5 @@
 <?php
-require_once("../php/database_connect.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/php/database_connect.php");
 function create_code($email)
 {
     $val = get_current_active($email);

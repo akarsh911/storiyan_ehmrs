@@ -1,5 +1,5 @@
 <?php
-require_once("./database_connect.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/php/database_connect.php");
 function create_user($email, $f_name, $l_name, $psw_hash)
 {
     $conn = openCon();

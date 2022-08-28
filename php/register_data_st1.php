@@ -1,6 +1,6 @@
 <?php
-require_once('./create_edit_user.php');
-require_once('./create_edit_application.php');
+require_once($_SERVER['DOCUMENT_ROOT'] .'/php/create_edit_user.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/php/create_edit_application.php');
 $f_name = $_POST["f_name"];
 $l_name = $_POST["l_name"];
 $email = $_POST["email"];

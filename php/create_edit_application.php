@@ -1,7 +1,7 @@
 <?php
 function create_application($email, $f_name, $l_name)
 {
-    require_once("./database_connect.php");
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/php/database_connect.php");
     $conn = openCon();
     $refid = gen_uuid();
     $sql = "INSERT INTO ehmrs_application (f_name,l_name,email,step,status,id) VALUES ('$f_name','$l_name','$email','1','Application Incomplete','$refid')";
@@ -37,4 +37,3 @@ function gen_uuid()
         mt_rand(0, 0xffff)
     );
 }
-?>

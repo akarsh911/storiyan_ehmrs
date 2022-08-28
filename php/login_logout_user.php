@@ -1,5 +1,5 @@
 <?php
-require_once('./database_connect.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/php/database_connect.php');
 function logged_in($f_name, $email, $sesson_id)
 {
     $conn = openCon();
@@ -14,13 +14,14 @@ function logged_in($f_name, $email, $sesson_id)
 function logout($email)
 {
     $conn = openCon();
-    $sql = "UPDATE logged_in  SET state='1' WHERE email='$email'";
+    $sql = "UPDATE logged_in  SET state='1' WHERE email='$email' OR session_key='$email'";
     if ($conn->query($sql) === TRUE) {
         return "1";
     } else {
         return "Error: " . $sql . "<br>" . $conn->error;
     }
 }
+
 function check_log_in($key)
 {
     $conn = openCon();

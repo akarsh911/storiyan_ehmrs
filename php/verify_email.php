@@ -4,7 +4,7 @@ if (isset($_SESSION["email"])) {
     if (!isset($_SESSION["tried"])) {
         $_SESSION["tried"] = 3;
     }
-    require_once("../php/verfication_code_generator.php");
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/php/verfication_code_generator.php");
     if (isset($_POST["code"]) && isset($_SESSION["email"])) {
         $resp = verify_code($_POST["code"], $_SESSION["email"]);
         if ($resp == 1) {
