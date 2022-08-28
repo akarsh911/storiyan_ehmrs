@@ -4,6 +4,7 @@ if (data != "" && data != null) {
     data = JSON.parse(data);
     if (data.val != null && data.val != "") {
         document.getElementById("password_error").innerText = data.val;
+        document.getElementById("password_error").style.visibility = "visible";
     }
 }
 function change_pwd() {
@@ -19,8 +20,26 @@ function change_pwd() {
     }
 }
 function fg_pwd() {
-    var chng = document.getElementById("box1");
-    fetch('../html/forgot_psw.html')
-        .then(response => response.text())
-        .then(text => document.getElementById('box1').innerHTML = text);
+    var chng = document.getElementById("content");
+    var target = document.getElementsByTagName("body")[0];
+    var chng = document.getElementById("content");
+    $.ajax(
+        {
+            url: '../html/forgot_psw.html',
+            dataType: "html",
+            success: function (data) {
+                chng.innerHTML = data;
+                var scripts = chng.getElementsByTagName("script");
+                console.log(scripts);
+                for (var i = 0; i < scripts.length; i++) {
+                    var newScript = document.createElement("script");
+                    newScript.src = scripts[i].src;
+                    target.appendChild(newScript);
+                }
+
+            },
+            error: function (e) {
+                alert('Error: ' + e);
+            }
+        });
 }

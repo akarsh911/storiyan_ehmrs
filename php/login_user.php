@@ -20,14 +20,24 @@ if ($resp == 0) {
     $err = array();
     $err["val"] = "Invalid Credentials";
     echo "<script> sessionStorage.setItem('err', `" . json_encode($err, JSON_PRETTY_PRINT) . "`);</script>";
-    echo '<script>window.onload = (event) => {location.replace("../html/login.html")};</script>';
+    echo '<script>window.onload = (event) => {location.replace("../login")};</script>';
 } else {
-    $id = gen_uuid();
-    if (logout($username) == 1) {
-        logout($username);
-        logged_in($resp, $username, $id);
-        echo "<script>setcookie('key','" . $id . "', 15)</script>";
-        echo '<script>window.onload = (event) => {location.replace("../html/dashboard.html")};</script>';
+    if (check_email_verify($username) == 0) {
+        session_start();
+        $_SESSION["email"] = $username;
+        $err = array();
+        $err["val"] = "email_verify";
+        echo "<script> sessionStorage.setItem('type', `" . json_encode($err, JSON_PRETTY_PRINT) . "`);</script>";
+        echo "<script> sessionStorage.setItem('email', `" . $username . "`);</script>";
+        echo '<script>window.onload = (event) => {location.replace("../verify")};</script>';
+    } else {
+        $id = gen_uuid();
+        if (logout($username) == 1) {
+            logout($username);
+            logged_in($resp, $username, $id);
+            echo "<script>setcookie('key','" . $id . "', 15)</script>";
+            echo '<script>window.onload = (event) => {location.replace("../html/dashboard.html")};</script>';
+        }
     }
 }
 function gen_uuid()

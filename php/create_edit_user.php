@@ -54,3 +54,18 @@ function login($email, $psw_hash)
         return 0;
     }
 }
+
+function check_email_verify($email)
+{
+    $conn = openCon();
+    $sql = "SELECT email_verify FROM ehmrs_users WHERE email='$email' || emp_code='$email'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            return $row['email_verify'];
+        }
+    } else {
+        return 0;
+    }
+}

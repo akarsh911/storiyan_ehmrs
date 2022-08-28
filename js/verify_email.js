@@ -1,10 +1,10 @@
-function login() {
-    var chng = document.getElementById("content");
+function ping() {
+    var chng = document.getElementById("box1");
     var target = document.getElementsByTagName("body")[0];
-    var chng = document.getElementById("content");
+    var chng = document.getElementById("box1");
     $.ajax(
         {
-            url: '../html/login_set.html',
+            url: '../php/verify_email.php',
             dataType: "html",
             success: function (data) {
                 chng.innerHTML = data;
@@ -22,4 +22,14 @@ function login() {
             }
         });
 
+}
+
+document.getElementById("email").innerText = sessionStorage.getItem("email");
+var data = sessionStorage.getItem("type");
+data = JSON.parse(data);
+if (data != null && data != "" && data.err != "" && data.err != null) {
+    document.getElementById("input_box").classList.remove("refill");
+    document.getElementById("input_box").classList.add("refill");
+    document.getElementById("verify_error").style.visibility = "visible";
+    document.getElementById("verify_error").innerHTML = data.err;
 }

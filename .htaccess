@@ -1,8 +1,11 @@
+Options -Indexes
 AddType text/html .shtml
 AddHandler server-parsed .shtml
 Options Indexes FollowSymLinks Includes
 AddHandler server-parsed .html .htm
 
 
-RewriteCond %{HTTP_REFERER} ^http://localhost$ [NC]
-RewriteRule \.(gif|jpg|swf|flv|png|html)$ [F,L]
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+      RewriteRule ^([a-zA-Z0-9_-]*)$  index.php?type=$1 [NC,C]
+</IfModule>
