@@ -8,19 +8,30 @@ body {
     min-height: calc(100vh - 12vh);
     margin-top: calc(12vh);
     background-color: rgba(0, 0, 0, 0.115);
-    z-index: -1;
+    z-index: 2;
 }
 
 .navigation_container {
-    position: relative;
+    position: fixed;
     min-height: calc(100vh - 12vh);
-    min-width: 15%;
-    width: fit-content;
+    width: 200px;
     max-width: 20%;
     box-shadow: 5px 2px 5px 5px rgb(0 0 0 / 16%), 7px 2px 10px 7px rgb(0 0 0 / 12%);
     display: flex;
     flex-wrap: wrap;
-    position: relative;
+}
+
+.navigation_container.thin {
+    min-width: 120px;
+    width: 120px
+}
+
+.navigation_container.thin .tab {
+    margin-top: 15px;
+}
+
+.navigation_container.thin .nav_icon {
+    margin: 0px;
 }
 
 .navigation_bar {
@@ -28,9 +39,136 @@ body {
     position: relative;
     height: calc(100vh - 12vh);
     width: 100%;
+    overflow-y: scroll;
+
 }
 
-.navigation_tab {
-    position: relative;
 
+.tab {
+    width: calc(100% - 10px);
+    height: 50px;
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    color: darkgreen;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: 18px;
+    position: relative;
+    padding: 5px;
+}
+
+.tab:hover {
+    margin-bottom: thin solid darkgreen;
+    background-color: rgb(165, 204, 165);
+    cursor: pointer;
+
+}
+
+.nav_icon {
+    margin-right: 10px;
+}
+
+
+
+div.navigation_bar:hover::-webkit-scrollbar {
+    visibility: visible;
+    width: 5px;
+    background: rgba(185, 233, 190, 0.795);
+}
+
+div.navigation_bar:hover::-webkit-scrollbar-track {
+    visibility: visible;
+    box-shadow: inset 0 0 3px rgba(103, 209, 86, 0.286);
+}
+
+div.navigation_bar:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+    background-color: rgb(60, 239, 37);
+    outline: 1px solid rgb(126, 144, 112);
+}
+
+div.navigation_bar::-webkit-scrollbar {
+
+    width: 5px;
+    background: rgba(185, 233, 190, 0.795);
+
+}
+
+div.navigation_bar::-webkit-scrollbar-track {
+    visibility: hidden;
+    box-shadow: inset 0 0 3px rgba(103, 209, 86, 0.286);
+}
+
+div.navigation_bar::-webkit-scrollbar-thumb {
+    visibility: hidden;
+    background-color: rgb(60, 239, 37);
+    outline: 1px solid rgb(126, 144, 112);
+}
+
+div.navigation_bar::-webkit-scrollbar-thumb:hover {
+    background: rgba(80, 170, 89, 0.538);
+
+}
+
+@media screen and (min-width : 490px) and (max-width : 700px) {
+    .navigation_container {
+        visibility: hidden;
+    }
+
+    .navigation_container.thin {
+        position: absolute;
+        left: 0px;
+        visibility: visible;
+        width: 200px;
+        min-width: 200px;
+        width: fit-content;
+
+    }
+
+    .navigation_container.thin .nav_icon {
+        margin-right: 10px;
+    }
+
+
+
+}
+
+@media screen and (max-width : 490px) {
+    .navigation_container {
+        visibility: hidden;
+    }
+
+    .navigation_container.thin {
+        position: absolute;
+        left: 0px;
+        visibility: visible;
+        width: 200px;
+        min-width: 200px;
+        width: fit-content;
+
+    }
+
+    .navigation_container.thin .nav_icon {
+        margin-right: 10px;
+    }
+
+    .right_box {
+        visibility: collapse;
+        display: none;
+        width: 20%;
+        overflow: hidden;
+    }
+
+    .notif {
+        visibility: collapse;
+        display: none;
+    }
+
+    .profile {
+        visibility: collapse;
+        display: none;
+    }
 }

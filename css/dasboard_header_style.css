@@ -23,12 +23,17 @@ body {
     align-content: center;
     justify-content: center;
     align-items: center;
+    z-index: 3;
 }
 
 .icon {
     font-size: 24px;
     color: rgb(40, 97, 3);
     padding-right: 14px;
+}
+
+.icon:hover {
+    cursor: pointer;
 }
 
 .logo_img {
