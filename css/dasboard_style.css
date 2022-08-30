@@ -31,7 +31,6 @@ body {
     height: calc(100vh - 12vh);
     width: 100%;
     overflow-y: scroll;
-
 }
 
 
@@ -39,13 +38,7 @@ body {
     width: calc(100% - 10px);
     height: 50px;
     margin-top: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
     color: darkgreen;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
     font-size: 18px;
     position: relative;
     padding: 5px;
@@ -55,12 +48,14 @@ body {
     margin-bottom: thin solid darkgreen;
     background-color: rgb(165, 204, 165);
     cursor: pointer;
-
 }
 
 .nav_icon {
     margin-right: 10px;
+    font-size: 28px;
+    margin-left: 15px;
 }
+
 
 .data_html {
     background-color: rgb(240, 245, 212);
@@ -118,10 +113,20 @@ div.navigation_bar::-webkit-scrollbar-thumb:hover {
 
 .navigation_container.thin .tab {
     margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    text-align: center;
 }
 
 .navigation_container.thin .nav_icon {
     margin: 0px;
+}
+
+.tab.first {
+    margin-top: 40px;
 }
 
 .data_html.thin {
