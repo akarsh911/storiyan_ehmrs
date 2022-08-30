@@ -1,3 +1,10 @@
+<?php
+require_once('../php/script_check_login.php');
+if (!check_login()) {
+    header("Location: /login");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,15 +18,18 @@
 </head>
 
 <body>
-    <?php include("../html/dasboard_header.html"); ?>
     <!--#include virtual="../html/dasboard_header.html" -->
+    <?php include("../html/dasboard_header.html"); ?>
     <div class="no_head">
-        <div class="navigation_container" swipe-open>
+        <div class="navigation_container " id="navigation_container">
             <div class="navigation_bar">
-                <?php ?>
+                <?php include("../html/applicant_nav.html");?>
             </div>
         </div>
     </div>
+    <div class="data_html" id="data_html"></div>
+    </div>
+    <script src="../js/dashboard.js"></script>
 </body>
 
 </html>

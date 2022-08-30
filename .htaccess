@@ -3,9 +3,10 @@ AddType text/html .shtml
 AddHandler server-parsed .shtml
 Options Indexes FollowSymLinks Includes
 AddHandler server-parsed .html .htm
-
+Options All -Indexes
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  RewriteRule ^dashboard$ /php/dashboard_index.php [NC,L]
   RewriteRule ^([a-zA-Z0-9_-]*)$ index.php?type=$1 [NC,C]
 </IfModule>

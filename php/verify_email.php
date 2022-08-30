@@ -39,8 +39,8 @@ if (isset($_SESSION["email"])) {
         }
     }
 } else {
-    echo "error retry";
+    echo "<script>alert('error retry');</script>";
     session_destroy();
     echo "<script> sessionStorage.clear();</script>";
-    // echo '<script>window.onload = (event) => {location.replace("../login")};</script>';
+    echo '<script>window.onload = (event) => {location.replace("../login")};</script>';
 }
