@@ -50,15 +50,25 @@ body {
     cursor: pointer;
 }
 
-.nav_icon {
-    margin-right: 10px;
+
+.nav_icon_hold {
     font-size: 28px;
+    margin-right: 10px;
     margin-left: 15px;
+    display: inline-block;
+    width: 30px;
+    vertical-align: middle;
+}
+
+.hold {
+    display: inline-block;
+    width: 120px;
+    vertical-align: middle;
 }
 
 
 .data_html {
-    background-color: rgb(240, 245, 212);
+    background-color: rgba(255, 255, 255, 0.445);
     min-width: 80%;
     margin-left: 200px;
     width: calc(100vw - 200px);
@@ -119,10 +129,15 @@ div.navigation_bar::-webkit-scrollbar-thumb:hover {
     align-self: center;
     align-content: center;
     text-align: center;
+    align-items: center;
 }
 
-.navigation_container.thin .nav_icon {
+.navigation_container.thin .nav_icon_hold {
     margin: 0px;
+}
+
+.navigation_container.thin .hold {
+    width: auto;
 }
 
 .tab.first {

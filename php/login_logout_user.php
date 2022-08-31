@@ -39,7 +39,28 @@ function check_log_in($key)
                 return 0;
         }
     } else {
-        return 6;
+        return 0;
+    }
+}
+
+function get_log_in($key)
+{
+    $conn = openCon();
+    $ip = get_client_ip();
+    $sql = "SELECT state , email FROM `logged_in` WHERE session_key='$key' AND ip='$ip';";
+    $result = $conn->query($sql);
+    if (!$result) {
+        echo ("Error description: " . $conn->error);
+    }
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            if ($row["state"] == 0)
+                return $row["email"];
+            else
+                return 0;
+        }
+    } else {
+        return 0;
     }
 }
 

@@ -23,11 +23,12 @@ if (!check_login()) {
     <div class="no_head">
         <div class="navigation_container " id="navigation_container">
             <div class="navigation_bar">
-                <?php include("../html/applicant_nav.html");?>
+                <?php include("../html/applicant_nav.html"); ?>
             </div>
         </div>
+
+        <div class="data_html" id="data_html"></div>
     </div>
-    <div class="data_html" id="data_html"></div>
     </div>
     <script src="../js/dashboard.js"></script>
 </body>

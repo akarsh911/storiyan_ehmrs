@@ -15,6 +15,7 @@
 }
 
 .form_box {
+    box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 16%), 7px 10px 10px 7px rgb(0 0 0 / 12%);
     margin-top: 5%;
     width: 60%;
     max-width: 750px;
@@ -182,4 +183,31 @@
         max-width: 600px;
     }
 
+}
+
+
+.progress_container {
+    width: 100%;
+    height: 20px;
+    background-color: rgb(206, 206, 206);
+    border-radius: 15px;
+
+}
+
+.pg {
+    background-color: rgb(8, 195, 8);
+    height: 100%;
+    width: 40%;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.pg_1 {
+
+    color: white;
+
+}
+
+.small {
+    font-size: 16px;
 }

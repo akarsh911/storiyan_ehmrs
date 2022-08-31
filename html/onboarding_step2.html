@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Onboarding-Step 1</title>
+    <link rel="stylesheet" href="../css/onboarding_style.css" />
+    <script src="https://kit.fontawesome.com/56f1776af2.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <!--- class for tick "fa-solid fa-circle-check" -->
+    <!--#include virtual="../html/header.html" -->
+    <div class="content" id="content">
+        <div class="form_box">
+            <div class="form_title">Step 2 of 5</div>
+            <div class="form_subtitle">
+                <div class="pg_base_container">
+                    <div class="progress_container">
+                        <div class="bar">
+                            <div class="pg"><span class="pg_1">40% </span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <br>
+            <div class="form_header"> Fill in the following Details</div>
+            <div class="form_content">
+                <form method="post" action="../php/register_data_st2.php?id=a607100a-0da9-47d2-9fd4-220b84f7a1dc">
+                    <!--Start of Single set-->
+                    <label class="label">Phone Number:</label><br>
+                    <div class="field_container">
+                        <div class="input_icons email"><i id="tel_err" class="fa fa-exclamation-circle errem"></i>
+                            <input onblur="tel_key();" type="tel" placeholder="Phone Number (10-digits only)"
+                                class="email" id="tel" name="tel" autocomplete="tel" />
+                        </div>
+                    </div>
+                    <span class="error_msg" id="tel_err_msg"></span><br>
+
+                    <!--End of Single set-->
+
+                    <!--get location from pin code or ip address-->
+                    <label class="label">Area Pin Code / Postal Code:<span class="red_star">*</span></label><br>
+                    <div class="field_container">
+                        <div class="input_icons email"><i id="pin_err" class="fa fa-exclamation-circle errem"></i>
+                            <input onblur="pin_key();" onkeypress="pin_key();" onkeyup="pin_key();" type="tel"
+                                placeholder="Pin Code (6 digits only)" class="email" id="pin" name="pin"
+                                autocomplete="postal-code" required />
+                        </div>
+                    </div>
+                    <span class="error_msg" id="pin_err_msg"></span><br>
+                    <!--end of get location-->
+                    <label class="label">Current Location: (auto-filled)<span class="red_star">*</span></label><br>
+                    <div class="field_container">
+                        <div class="input_icons"><i id="city_err" class="fa fa-exclamation-circle err"></i>
+                            <input class="boxes" type="text" placeholder="City" name="city" id="city" readonly
+                                required />
+                        </div>
+                        <div class="input_icons"><i id="state_err" class="fa fa-exclamation-circle err"></i>
+                            <input class="boxes" type="text" placeholder="State" name="state" id="state" readonly
+                                required />
+                        </div>
+                    </div>
+                    <span class="error_msg" id="psw_err_msg"></span><br>
+                    <div class="field_container submit">
+                        <button type="submit" class="submit_bt">Create Account <i class="fa fa-key"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../js/onboarding_step2.js"></script>
+    <script src="../js/random_bg.js"></script>
+</body>
+
+</html>
